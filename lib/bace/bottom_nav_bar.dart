@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:tamin/bace/res/styles/app_styles.dart';
 import 'package:tamin/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -33,19 +34,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        //backgroundColor: Colors.greenAccent,
-        title: const Text(
-          "My Ticket",
-          textAlign: TextAlign.center,
-        ),
-      ),
       body: appPage[_pageIndex],
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: false,
           showSelectedLabels: false,
-          selectedItemColor: Colors.green,
-          unselectedItemColor: Colors.green,
+          selectedItemColor: AppStyles.selectedItemColorBottomNavBar,
+          unselectedItemColor: AppStyles.unselectedItemColorBottomNavBar,
           currentIndex: _pageIndex,
           onTap: _onItemTapped,
           items: const [
